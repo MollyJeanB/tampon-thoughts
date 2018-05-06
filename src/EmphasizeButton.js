@@ -4,7 +4,7 @@ import "./App.css"
 export default function EmphasizeButton(props) {
 
 return (
-  <button className="emphasize-button" onClick={() => props.emphText()}>To make it emphatic, click me!</button>
+  <button id={props.id} className="emphasize-button" onClick={() => props.emphText()}>To make it emphatic, click me!</button>
 )
 
 }

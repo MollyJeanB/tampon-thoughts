@@ -4,6 +4,6 @@ import './App.css';
 export default function Button(props) {
 
   return (
-    <button className="poem-button" onClick={() => props.onClick()}>Click me!</button>
+    <button className="poem-button" onClick={() => props.onClick()}>{props.text}</button>
   )
 }

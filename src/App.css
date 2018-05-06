@@ -29,7 +29,7 @@ h1 {
 
 .poem-button,
 .emphasize-button {
-  width: 110px;
+  width: 150px;
   height: 45px;
   font-size: 18px;
   margin: 20px;
@@ -48,12 +48,23 @@ h1 {
   background: red;
 }
 
+.emphasize-button:disabled {
+  background: gray;
+}
+
+.line-contain {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .poem-text {
-  font-size: 20px;
-  padding: 20px;
+  font-size: 22px;
+  padding: 25px;
   line-height: 22px;
   color: #222;
-  height: 100px;
 }
 
 .explain {
@@ -62,4 +73,8 @@ h1 {
 
 .tampon-icon {
   height: 60px;
+}
+
+.button-contain {
+  height: 90px;
 }

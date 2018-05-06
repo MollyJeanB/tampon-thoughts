@@ -3,6 +3,7 @@ import './App.css';
 import Button from "./Button"
 import EmphasizeButton from "./EmphasizeButton"
 
+
 const poemLines = [
   `white-jacketed worker who clears the table`,
   `you who blossomed into the air like steam from a whale's blowhole`,
@@ -14,6 +15,17 @@ const poemLines = [
   `mute calligrapher—we write you here`
 ]
 
+//gets random line from array
+function getRandomLine(currentLine) {
+  let newRandomLine = poemLines[Math.floor(poemLines.length * Math.random())]
+  if (newRandomLine !== currentLine) {
+    return newRandomLine
+    //if new random line is equal to the current random line, execute the function again
+  } else {
+    return getRandomLine(currentLine)
+  }
+}
+
 class App extends Component {
 
 constructor(props) {
@@ -24,21 +36,35 @@ constructor(props) {
 }
 
 onClick() {
-  let randomLine = poemLines[Math.floor(poemLines.length * Math.random())]
+
+let randomLine = getRandomLine(this.state.line)
+//re-enable uppercasing button if it's in the DOM
+  if (this.state.line !== "") {
+    document.getElementById("emphButton").disabled = false;
+  }
   this.setState({
-    line: randomLine
+    line: randomLine,
   })
 }
 
 emphText() {
   this.setState({
-    line: this.state.line.toUpperCase()
+    line: this.state.line.toUpperCase(),
   })
+  //disable uppercasing button after it has been clicked
+  document.getElementById("emphButton").disabled = true;
 }
 
   render() {
 
-    let emphasize
+    let emphasizeButton
+    let buttonText
+    if (this.state.line === "") {
+      buttonText = "Click Me!"
+    } else {
+      buttonText = "Click me again!"
+      emphasizeButton = <EmphasizeButton id="emphButton" emphText={() => this.emphText()} />
+    }
 
     return (
       <div className="App">
@@ -49,11 +75,14 @@ emphText() {
         </header>
         <Button
           onClick={() => this.onClick()}
+          text={buttonText}
         />
-        <div className={"poem-text"}>{this.state.line}</div>
-        <EmphasizeButton
-          emphText={() => this.emphText()}
-        />
+        <div className={"line-contain"}>
+          <div className={"poem-text"}>{this.state.line}</div>
+        </div>
+        <div className={"button-contain"}>
+          {emphasizeButton}
+        </div>
         <div className={"icon-box"}>
           <img
             src={require("./tampon.png")}
