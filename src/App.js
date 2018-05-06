@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Button from "./Button"
+import EmphasizeButton from "./EmphasizeButton"
 
 const poemLines = [
   `white-jacketed worker who clears the table`,
@@ -29,7 +30,15 @@ onClick() {
   })
 }
 
+emphText() {
+  this.setState({
+    line: this.state.line.toUpperCase()
+  })
+}
+
   render() {
+
+    let emphasize
 
     return (
       <div className="App">
@@ -42,6 +51,9 @@ onClick() {
           onClick={() => this.onClick()}
         />
         <div className={"poem-text"}>{this.state.line}</div>
+        <EmphasizeButton
+          emphText={() => this.emphText()}
+        />
         <div className={"icon-box"}>
           <img
             src={require("./tampon.png")}
