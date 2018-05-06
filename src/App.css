@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+h1 {
+  letter-spacing: 1px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.poem-button {
+  width: 110px;
+  height: 45px;
+  font-size: 18px;
+  margin: 20px;
+  color: white;
+  background: #AB0B0B;
+}
+
+.poem-button:hover {
+  background: red;
+}
+
+.poem-text {
+  font-size: 20px;
+  padding: 20px;
+  line-height: 22px;
+  color: #222;
+  height: 100px;
+}
+
+.explain {
+  font-size: 20px;
+}
+
+.tampon-icon {
+  height: 60px;
+}
