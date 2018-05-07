@@ -1,31 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+
+button, .poem-text, .explain, h1 {
+  font-family: 'Muli', sans-serif;
+}
+
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-h1 {
-  letter-spacing: 1px;
+  color: #222;
 }
 
 .App-title {
-  font-size: 1.5em;
+  letter-spacing: 1px;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 15px 25px 0;
+  margin: 10px;
 }
 
-.App-intro {
-  font-size: large;
+.explain {
+  font-size: 20px;
+  padding: 0 15px;
+  margin: 10px;
 }
+
 
 .poem-button,
 .emphasize-button {
@@ -53,22 +54,20 @@ h1 {
 }
 
 .line-contain {
-    height: 100px;
-    width: 100%;
+    margin: 0 auto;
+    height: 120px;
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #ECECED;
 }
 
 .poem-text {
-  font-size: 22px;
-  padding: 25px;
-  line-height: 22px;
+  font-size: 21px;
+  padding: 25px 10px;
+  line-height: 26px;
   color: #222;
-}
-
-.explain {
-  font-size: 20px;
 }
 
 .tampon-icon {

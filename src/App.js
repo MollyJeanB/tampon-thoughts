@@ -10,9 +10,13 @@ const poemLines = [
   `you who were compressed into a dense calyx`,
   `out of the second-stage rocket's cardboard cylinder`,
   `you who began life as a seed in the earth`,
-  `before the eyes of a girl child`,
   `nib which dips into a forty-year river`,
-  `mute calligrapher—we write you here`
+  `mute calligrapher—we write you here`,
+  `prepared for the feast which goes uneaten`,
+  `dry dock for the boat not taken`,
+  `seeker of the red light of stars`,
+  `bloodhound`,
+  `secret-keeper`
 ]
 
 //gets random line from array
@@ -55,6 +59,11 @@ emphText() {
   document.getElementById("emphButton").disabled = true;
 }
 
+scrollToForm(id) {
+  const scrollDiv = document.getElementById(id)
+  scrollDiv.scrollIntoView({behavior: "smooth"})
+}
+
   render() {
 
     let emphasizeButton
@@ -68,9 +77,12 @@ emphText() {
 
     return (
       <div className="App">
+        <div className={"nav-bar"}>
+          <button className={"nav-button"} onClick={() => this.scrollToForm("about")}>About</button>
+            <button className={"nav-button"} onClick={() => this.scrollToForm("credits")}>Credits</button>
+        </div>
         <header className="App-header">
-          <h1 className="App-title">Tampon Thoughts</h1>
-          <p className="refactor"> <i>Now refactored in React!</i></p>
+          <h1 className="App-title">TAMPON THOUGHTS</h1>
           <p className="explain"> Click the button to see a line from "Ode to the Tampon" by Sharon Olds</p>
         </header>
         <Button
