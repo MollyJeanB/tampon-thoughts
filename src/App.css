@@ -77,3 +77,27 @@ button, .poem-text, .explain, h1 {
 .button-contain {
   height: 90px;
 }
+
+.nav-bar {
+  width: 100%;
+  height: 50px;
+  background: #222;
+}
+
+.nav-button, .nav-button-credits {
+  color: white;
+  background: none;
+  position: absolute;
+  border: none;
+  text-decoration: underline;
+  font-size: 18px;
+  top: 10px;
+}
+
+.nav-button {
+  right: 80px
+}
+
+.nav-button-credits {
+  right: 10px;
+}

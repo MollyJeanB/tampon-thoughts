@@ -79,7 +79,7 @@ scrollToForm(id) {
       <div className="App">
         <div className={"nav-bar"}>
           <button className={"nav-button"} onClick={() => this.scrollToForm("about")}>About</button>
-            <button className={"nav-button"} onClick={() => this.scrollToForm("credits")}>Credits</button>
+            <button className={"nav-button-credits"} onClick={() => this.scrollToForm("credits")}>Credits</button>
         </div>
         <header className="App-header">
           <h1 className="App-title">TAMPON THOUGHTS</h1>
