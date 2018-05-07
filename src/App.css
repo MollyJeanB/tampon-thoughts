@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,700');
 
-button, .poem-text, .explain, h1 {
+button, .poem-text, .explain, h1, .about, .credits {
   font-family: 'Muli', sans-serif;
 }
 
@@ -100,4 +100,20 @@ button, .poem-text, .explain, h1 {
 
 .nav-button-credits {
   right: 10px;
+}
+
+.about {
+  background: #222;
+  color: white;
+  margin: 0;
+}
+
+.credits {
+  background: #383838;
+  color: white;
+  margin: 0;
+}
+
+p, h2 {
+  margin: 0;
 }
