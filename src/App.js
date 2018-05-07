@@ -112,6 +112,10 @@ scrollToForm(id) {
               className="tampon-icon"
              />
         </div>
+      <div className={"about"}>
+
+      </div>
+      <div className={"credits"}></div>
       </div>
     );
   }
